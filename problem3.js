@@ -37,11 +37,16 @@ const upperCased= lastNames.map(lastNames => lastNames.toUpperCase());
 
 console.log(upperCased);
 
-// problem 10
-const fullNames = [firstNames[0] + ' , ' + lastNames[0]];
-console.log(fullNames);
 
-// error :/
+
+// problem 10
+
+
+for (let i = 0; i<10; i++){
+    const fullNames = [firstNames[i]+ ' ' + lastNames[i]];
+    console.log(fullNames)
+    
+}
 
 
 
