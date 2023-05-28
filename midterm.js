@@ -74,5 +74,112 @@ console.log(result1);
 console.log(result2);
 console.log(result3);
 
+// /როგორ მუშაობს switch (case და default)?/;
+// switch ფუნქცია ადარებს სხვადასხვა შემთხვეცებს, case , ერთმანეთს. if else else if გამოყენების მაგივრად შეგვიძლია გამოვიყენოთ switch ფუნქცია.
+let season = 3;
+let seasonName;
+
+switch (season) {
+  case 1:
+    seasonName = "spring";
+    break;
+  case 2:
+    seasonName = "summer";
+    break;
+  case 3:
+    seasonName = "autumn";
+    break;
+  case 4:
+    seasonName = "winter";
+    break;
+  default:
+    dayName = "Invalid season";
+}
+
+console.log(seasonName); // Output: Wednesday
+
+// /* array */
+
+// /ახსენით რა არის და რისთვის გამოიყენება მონაცემთა სტრუქტურები (data structures)?/;
+// მონაცემთ სტრუქტურები არის მონაცემთა დახარისხების ფორმა jsში, იგი ხელს გვიწყობს ინფორმაციის უფრო ეფექტურად  დახარისხებაში:array, object, map, set
+
+// /რა არის მასივი (array)?/;
+// array არის მონაცემტა სტრუქტურა jsში რომელიც საშვალებას გვაძლევს შევინახოთ ბევრი მნიშვნელობა ერთ ცვლადში
+let fruits = ["apple", "orange", "bannana", "kiwi", "strawberry"];
+console.log(fruits[2]);
+
+// /როგორ ხდება მასივის მანიპულირება [წვდომა, წაშლა, ჩამატება, შეცვლა]?/;
+fruits.push("watermelon");
+console.log(fruits);
+
+fruits.pop()
+console.log(fruits);
+
+fruits.splice(1, 1, "melon");
+console.log(fruits);
+
+// /* loops */
+// /რა არის ციკლი?/;
+// loop გამოიყენება რაიმე კოდის ბლოკის განმეორებით შესასრულებლად, სანამ გარკვეული პირობა არ დაკმაყოფილდება.არსებობს for, while, dowhile ლუპები 
+
+
+
+// /რა არის იტერაცია იგივე ბიჯი?/;
+
+// /როგორ მუშაობს for ციკლი?/;
+for(let i= 0; i<10; i++){
+    console.log(i);
+}
+
+
+// /როგორ მუშაობს while ციკლი?/;
+let i = 0;
+while(i<10){
+    console.log(i);
+    i++
+}
+
+// /როგორ მუშაობს do while ციკლი?/;
+let f = 0;
+do{
+    console.log(f);
+    f++;
+}while(f<4);
+
+// /რა სხვაობაა [break -ს და continue -ს] შორის?/;
+// break განცხადება ასრულებს ლუპს ანუ გამოდის მარყუჟიდან ხოლო continue განცხადება ახტება კონკრეტულს შემთხვევას და აგრდძელებს ლუპს 
+for (let i = 0; i < 5; i++) {
+    if (i === 3) {
+      break;
+    }
+    console.log(i);
+  }
+
+  for (let i = 0; i < 5; i++) {
+    if (i === 3) {
+      continue;
+    }
+    console.log(i);
+  }
+
+// /* functions */
+// /რა არის ფუნქცია და როგორ მუშაობს ის?/;
+//  ფუნქციები არის კოდის მრავალჯერადი გამოყენების ბლოკები, რომლებიც შეიძლება განისაზღვროს და გამოიძახოს კონკრეტული დავალების შესასრულებლად. 
+function functionName(parameter1, parameter2) {
+    // Function body
+    // Code to be executed
+    return result; // Optional: Return a value
+  }
+  
+
+// /რა არის ფუნქციის ტანი (function body)?/;
+// ფუნქციის ტანი არის ის რაც იწერება ფიგურულ ფრჩხილებში 
+
+// /რას ნიშნავს ფუნქციის განსაზღვრა (definition)?/;
+// ჯერ უნდა განისაზღვროს ფუნქცია და შემდეგ უნდა გამოვიძახოთ, დავარქმევთ ფუნქციას სახელს, გადავცემთ პარამეტრს რომელიც შეიძლება იყოს ერთი ან ერთზე მეტი და შეგვიძლია გამოვყოთ მძიმით function(parameter1, parameter2...),განცხადებები რომელიც განსაზღვრავენ ფუნქციას {} ფრჩხილებში
+function square(number) {
+    return number * number;
+  }
+
 
 
