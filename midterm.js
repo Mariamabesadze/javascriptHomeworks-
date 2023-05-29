@@ -180,6 +180,93 @@ function functionName(parameter1, parameter2) {
 function square(number) {
     return number * number;
   }
+// /რა არის ფუნქციის გამოძახება (call, invoke)?/;
+// ფუნქციის შიგნით ჩაწერილი კოდი არ სრულდება ფუნქციის განსაზღვრისას არამედ მისი გამოძახების შემდეგ მაგალითდ 
+function sayHello() {
+    console.log("Hello!");
+  }
+  
+  sayHello();
+// ამ შემთხვევაში ფუნქცია განვსაზღვრეთ რაიმე პარამეტრის გარეშე და შემდეგ გამოვიძხეთ იგი console.log ის გარეშე 
+
+function greet(name) {
+    console.log("Hello, " + name + "!");
+  }
+  
+  greet("John");
+// ამ შემთხვევაში გამოვიყენეთ პარამეტრი 
+
+function add(a, b) {
+    return a * b;
+  }
+  
+  var result = add(10, 7);
+  console.log(result);
+//   ამ შემთხვევაში პარამეტრების შეყვანის დროს ფუნქცია გვიბრუნებს რაგაც მნიშვნელობას 
+// /რა არის პარამეტრები?/;  
+// პარამეტრი არის მნიშცვნელობა რომელიც შეგვიძლია გადავცეთ ფუნქციას როდესაც მას გამოვიძახებთ, პარამეტრი არის იგივე ცვლადი 
+function introduction (name1,name2){
+    console.log(`hello ${name1} my name is ${name2}`);
+}
+
+introduction("mari", "gio");
+// პარამეტრი არის name1 და name2
+
+// /რა არის default პარამეტრი?/;
+// default პარამეტრი საშუალებას გვაძლევს default მნიშვნელობები მივანიჭოთ ფუნქციის პარამეტრს თუ ფუნქციის გამოძახებისას არ არის მინიჭებული არანაირი მნიშვნელობა ან განუსაზღვრელია(undefined)
+function greet(name = "Guest") {
+    console.log("Hello, " + name + "!");
+  }
+greet();
+greet("mari");
+greet(undefined);
+
+
+// /რა უნდა გავითვალისწინოთ default პარამეტრის გამოყენებისას?/;
+
+
+// /რას ნიშნაბს ფუნქციის დასაბრუნებელი მნიშვნელობა (return value)?/;
+function multiply(a, b) {
+    return a * b; 
+  }
+let answear = multiply(3,4);
+console.log(answear);
+
+// /ახსენით ხილვადობები (local scope vs global)/;
+
+// ფუნქციაში გამოცხადებული ცვლადები ითვლება local scope ად,
+// ლოკალური ცვლადები ხელმისაწვდომია მხოლოდ იმ ფუნქციიშ შიგნით სადაც ისინი არიან განსაზღვრულები,
+// თითოეული ფუნქცია ქმნის საკუთრ local scopeს ანუ მათში შექმნილი ცვლადები იგივე სახელით შეიძლება არსებობდეს სხვა ფუნქციებშ ისე რო ერთმანეთ ხელი არ შეუშალოს
+function myFunction() {
+    var localVariable = "I am local";
+    console.log(localVariable); // Output: I am local
+  }
+  
+  myFunction();
+  console.log(localVariable);
+
+// global variable იქმნება ფყნქციის გარეთ, შეგვიძლია გამოვიყენოთ ნებისმიერ ფუნქციაში ან კოდის ბლოკში რადგან ხელმისაწვდომია ყველგან 
+
+var globalVariable = "I am global";
+
+function myFunction() {
+  console.log(globalVariable);
+}
+
+console.log(globalVariable); 
+myFunction();
+
+// /რა არის shadowing?/;
+// shadowing ხდება მაშინ, როდესაც ცვლადს, რომელიც დეკლარირებულია შიდა სკოპში, იგივე სახელი აქვს, რაც გარე სკოპში გამოცხადებულ ცვლადს
+
+// let e = 10; // Outer variable
+let e = 30;
+function number(){
+    let e = 20;
+    console.log(e)
+}
+number()
+console.log(e);
 
 
 
